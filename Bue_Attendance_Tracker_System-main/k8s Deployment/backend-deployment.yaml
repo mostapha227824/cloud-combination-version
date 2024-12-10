@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: attendance-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: attendance-backend
+  template:
+    metadata:
+      labels:
+        app: attendance-backend
+    spec:
+      containers:
+      - name: attendance-backend
+        image: mostapha227824/attendance-backend:latest
+        ports:
+        - containerPort: 50001

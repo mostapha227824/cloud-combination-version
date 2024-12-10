@@ -1,0 +1,28 @@
+POST http://localhost:50001/AdminReg HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Admin User",
+    "email": "admin@example.com",
+    "password": "admin123",
+    "schoolName": "Auc University"
+}
+
+
+POST http://localhost:50001/AdminLogin HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "mostapha_signup132@gmail.com",
+    "password": "12345"
+}
+
+PUT http://localhost:50001/StudentAttendance/67539acfcebb5ddbfd571dbc HTTP/1.1
+Content-Type: application/json
+
+{
+    "subName": "67539b1acebb5ddbfd571dc7", 
+    "status": "Present", 
+    "date": "2024-9-23"  
+}
+

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: attendance-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: attendance-frontend
+  template:
+    metadata:
+      labels:
+        app: attendance-frontend
+    spec:
+      containers:
+      - name: attendance-frontend
+        image: mostapha227824/attendance-frontend:latest
+        ports:
+        - containerPort: 3000
